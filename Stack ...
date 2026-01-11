@@ -1,0 +1,37 @@
+import java.util.Stack;
+
+
+public class Dsa1 {
+
+    public static void main(String[] args) {
+        
+
+        Stack<String> stack = new Stack<String>();
+
+          stack.push("Imran");
+          stack.push("Love");
+          stack.push("Hornet Bee");
+          stack.push("Bee");
+                  
+          //nt: In stack it count first element from last one like Bee is the last but in stack Bee is the First.
+            
+          stack.pop();  //pop remove item from the bottom 
+          
+            // String loveNickName = stack.pop();//for showing single name from bottom .
+            //String imranNikeName = stack.pop();
+            
+           System.out.println(stack.peek());//Returns the top element of the stack.
+           System.out.println(stack.search("Imran")); //searching and numbering stack
+           
+          
+          for (int i = 0; i< 5; i++){
+            stack.push("Xoxo"); // Ading and running a input multiplTime
+          }          
+          
+          
+          System.out.println(stack);
+          //System.out.println(loveNickName);
+          //System.out.println(imranNikeName);
+    }
+    
+}
