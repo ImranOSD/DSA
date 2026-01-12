@@ -1,0 +1,40 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Dsa2 {
+
+    public static void main(String[] args) {
+        
+
+        Queue<String> queue = new LinkedList<>();
+        
+
+        queue.offer("Imran");
+        queue.offer("Mim");
+        queue.offer("Ramim");
+        queue.offer("Sumona");
+
+
+
+     System.out.println(queue.peek()); //Peek Will show the 1st input..
+                                           //FIFO
+
+      
+   queue.poll(); //it remove or poll the 1st input..
+
+ queue.offer("Akash");// it add additional input.
+         
+
+  System.out.println(queue.isEmpty()); // it show that there any input or not
+ System.out.println(queue.size()); // it show how mane input on this queue.
+
+System.out.println(queue.contains("Mim")); // given input responce or not.
+
+System.out.println(queue.remove()); //also remove .. 
+   System.out.println(queue);
+   
+        
+         
+    }
+    
+}
