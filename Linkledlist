@@ -1,0 +1,34 @@
+import java.util.LinkedList;
+
+public class Dsa3{
+    public static void main(String[] args) {
+        
+
+
+        LinkedList<String> linkedList = new LinkedList<>();
+
+
+        linkedList.offer("Md.Imran Hasan");
+        linkedList.offer("Arifur Rahman");
+          linkedList.offer("Alim Khan");
+            linkedList.offer("Japan Ali");
+              linkedList.offer("Mim");
+                linkedList.offer("Sumona");
+        
+             linkedList.poll();
+
+            linkedList.add(6,"Akram Hosen");
+              linkedList.remove("Japan Ali");
+              
+              
+
+              System.out.println(linkedList.peekFirst());
+              System.out.println(linkedList.peekLast());
+
+                        linkedList.addFirst("Afsana Mimi");//
+                        linkedList.addLast("Jannatul Ariba");//
+                       String first = linkedList.removeFirst();// Both 4 are in 1 term.. add first and last.remove first and last.
+                       String last = linkedList.removeLast();//
+        System.out.println(linkedList);        
+    }
+}
