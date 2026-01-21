@@ -1,0 +1,29 @@
+public class Dsa6{
+    public static void main(String[] args) {
+        
+
+        String[] array ={"Imran","Maimona","Afsana","Ariba","Mim"};
+
+        int index = linearSearch(array,"Mim");
+
+        if(index != -1){
+            System.out.println("Name found at index : "+index);
+        }
+        else{
+            System.out.println("Name Not found");
+        }
+    }
+
+        private static int linearSearch(String[] array, String value){
+        
+            for(int i = 0; i< array.length; i++){
+
+                if(array[i].equals(value)){
+                    return i;
+                }
+            }
+           return -1;
+        }
+
+    }
+--------------------------------------------------------------
