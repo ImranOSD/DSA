@@ -1,0 +1,33 @@
+public class Dsa12{
+    public static void main(String[] args) {
+        
+
+
+     System.out.println(factorial(10));
+    }
+
+
+    private static int factorial(int num){
+        if(num < 1)
+            return 1;
+        return num * factorial(num - 1);
+
+
+    }
+}
+    
+------------------------------------------------------
+
+public class Dsa12{
+    public static void main(String[] args) {
+        
+        System.out.println(power(2,9));
+    }
+
+
+    private static int power(int base,int power){
+        if(power < 1) 
+            return 1;
+        return base*power(base,power-1);
+    }
+}
