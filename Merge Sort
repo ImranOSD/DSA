@@ -2,7 +2,7 @@ public class Dsa13 {
     public static void main(String[] args) {
         
 
-        int[] array = {9,4,6,2,1,3,5,10,8,7};
+        int[] array = {9,8,6,2,1,3,5,10,4,7};
         mergeSort(array);
 
         for(int i = 0; i<array.length;i++){
