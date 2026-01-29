@@ -1,6 +1,7 @@
 import java.util.*;
 public class Dsa15 {
 
+//for single value
 
     public static void main(String[] args) {
         
@@ -20,3 +21,24 @@ public class Dsa15 {
 
     }
 -------------------------------------------------------------------
+import java.util.*;
+public class Dsa15 {
+
+//for multiple value..
+    public static void main(String[] args) {
+        
+
+    Hashtable<Integer,String> table = new Hashtable<>(10);
+          
+    table.put(1001, "Imran");
+    table.put(1002, "Tonmoy");
+    table.put(1003,"Sabrina");
+    table.put(1004,"Shawon ");
+    table.put(1005,"Orko");
+
+    for(Integer key : table.keySet()){
+        System.out.println(key.hashCode() % 10 + "\t" + key + "\t" + table.get(key));
+    }
+
+    }
+  
