@@ -1,0 +1,22 @@
+import java.util.*;
+public class Dsa15 {
+
+
+    public static void main(String[] args) {
+        
+
+    Hashtable<Integer,String> table = new Hashtable<>(10);
+          
+    table.put(1001, "Imran");
+    table.put(1002, "Tonmoy");
+    table.put(1003,"Sabrina");
+    table.put(1004,"Shawon ");
+    table.put(1005,"Orko");
+        
+
+
+    System.out.println(table.get(1001));
+
+
+    }
+-------------------------------------------------------------------
