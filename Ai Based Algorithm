@@ -1,0 +1,99 @@
+//Hill climber algorithm
+
+
+def f(x):
+    return -(x - 8) ** 2 + 64
+
+
+x = 1
+print("Start: x =", x)
+
+while True:
+    print("Current x =", x, "f(x) =", f(x))
+
+    if f(x + 1) > f(x):
+        x += 1
+        print("Move to x =", x)
+
+    elif f(x - 1) > f(x):
+        x -= 1
+        print("Move to x =", x)
+
+    else:
+        print("No better neighbor found.")
+        break
+
+print("Best x =", x)
+print("Maximum value =", f(x))
+
+
+---------------------------------------
+
+//A* Algorithm
+
+from queue import PriorityQueue
+
+goal = [1,2,3,8,0,4,7,6,5]
+start = [2,8,3,
+         1,6,4,
+         7,0,5]
+
+moves = {0:[1,3],1:[0,2,4],2:[1,5],3:[0,4,6],
+         4:[1,3,5,7],5:[2,4,8],6:[3,7],7:[4,6,8],8:[5,7]}
+
+def h(state):
+    return sum(a != b and b != 0 for a, b in zip(state, goal))
+
+pq = PriorityQueue()
+pq.put((h(start), 0, start))
+visited = set()
+
+while not pq.empty():
+    f, g, state = pq.get()
+
+    if tuple(state) in visited:
+        continue
+    visited.add(tuple(state))
+
+    print("Imran Cost =", f)
+    for i in range(0, 9, 3):
+        print(state[i:i+3])
+    print()
+
+    if state == goal:
+        print("Goal Paise Re Mammah!")
+        break
+
+    blank = state.index(0)
+    for m in moves[blank]:
+        new = state[:]
+        new[blank], new[m] = new[m], new[blank]
+        if tuple(new) not in visited:
+            pq.put((g+1+h(new), g+1, new))
+
+------------------------------------------------------
+//knn
+
+import math
+
+data = [([1,2],"A"),
+        ([2,3],"A"),
+        ([3,1],"A"),
+        ([8,8],"B"), 
+        ([9,7],"B"), 
+        ([8,9],"B")
+        ]
+new_point = [1, 9]
+k = 3
+
+
+neighbors = sorted(data, key=lambda x: math.dist(x[0], new_point))[:k]
+
+
+labels = [label for _, label in neighbors]
+prediction = max(set(labels), key=labels.count)
+
+print("Nearest Neighbors:", neighbors)
+print("Predicted:", prediction)
+
+
